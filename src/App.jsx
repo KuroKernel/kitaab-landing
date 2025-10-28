@@ -1,10 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import LandingPage from './LandingPage';
+import Home from './pages/Home';
+import About from './pages/About';
+import Features from './pages/Features';
+import HowItWorks from './pages/HowItWorks';
+import Contact from './pages/Contact';
+import Security from './pages/Security';
 
 function App() {
   return (
     <HelmetProvider>
-      <LandingPage />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/security" element={<Security />} />
+        </Routes>
+      </Router>
     </HelmetProvider>
   );
 }
