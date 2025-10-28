@@ -89,7 +89,7 @@ const Features = () => {
                 <div className="feature-icon">{feature.icon}</div>
                 <h3>{feature.title}</h3>
                 <p>{feature.desc}</p>
-                <div style={{ marginTop: '1rem', color: 'var(--primary-purple)', fontWeight: 600, fontSize: '0.875rem' }}>
+                <div style={{ marginTop: '1rem', color: 'var(--primary-teal)', fontWeight: 600, fontSize: '0.875rem' }}>
                   ✓ {feature.demo}
                 </div>
               </motion.div>

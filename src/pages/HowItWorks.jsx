@@ -99,7 +99,7 @@ const HowItWorks = () => {
                 transition={{ delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary-purple)', marginBottom: '0.5rem' }}>
+                <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary-teal)', marginBottom: '0.5rem' }}>
                   {step.number}
                 </div>
                 <div className="feature-icon">{step.icon}</div>

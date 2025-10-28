@@ -280,7 +280,7 @@ const Signup = () => {
               </form>
 
               <p style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.875rem', color: 'var(--gray-600)' }}>
-                Already have an account? <Link to="https://app.kitaab.live" style={{ color: 'var(--primary-purple)', fontWeight: 600 }}>Login</Link>
+                Already have an account? <Link to="https://app.kitaab.live" style={{ color: 'var(--primary-teal)', fontWeight: 600 }}>Login</Link>
               </p>
             </motion.div>
 

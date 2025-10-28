@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
             <p>© 2024 Kitaab Technologies Private Limited. All rights reserved.</p>
-            <p>Made in India with 💜</p>
+            <p>Made in India with 💚</p>
           </div>
         </div>
       </footer>

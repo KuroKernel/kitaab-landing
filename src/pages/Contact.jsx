@@ -116,7 +116,7 @@ const Contact = () => {
                     fontSize: '1rem',
                     transition: 'border-color 0.3s'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-purple)'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-teal)'}
                   onBlur={(e) => e.target.style.borderColor = 'var(--gray-200)'}
                 />
               </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                     border: '2px solid var(--gray-200)',
                     fontSize: '1rem'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-purple)'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-teal)'}
                   onBlur={(e) => e.target.style.borderColor = 'var(--gray-200)'}
                 />
               </div>
@@ -153,7 +153,7 @@ const Contact = () => {
                     border: '2px solid var(--gray-200)',
                     fontSize: '1rem'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-purple)'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-teal)'}
                   onBlur={(e) => e.target.style.borderColor = 'var(--gray-200)'}
                 />
               </div>
@@ -171,7 +171,7 @@ const Contact = () => {
                     border: '2px solid var(--gray-200)',
                     fontSize: '1rem'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-purple)'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-teal)'}
                   onBlur={(e) => e.target.style.borderColor = 'var(--gray-200)'}
                 />
               </div>
@@ -191,7 +191,7 @@ const Contact = () => {
                     fontSize: '1rem',
                     resize: 'vertical'
                   }}
-                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-purple)'}
+                  onFocus={(e) => e.target.style.borderColor = 'var(--primary-teal)'}
                   onBlur={(e) => e.target.style.borderColor = 'var(--gray-200)'}
                 />
               </div>
