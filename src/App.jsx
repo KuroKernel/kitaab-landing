@@ -6,6 +6,7 @@ import Features from './pages/Features';
 import HowItWorks from './pages/HowItWorks';
 import Contact from './pages/Contact';
 import Security from './pages/Security';
+import Signup from './pages/Signup';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
     </HelmetProvider>
