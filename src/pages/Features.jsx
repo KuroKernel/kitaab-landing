@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaCamera, FaMicrophone, FaWhatsapp, FaFileInvoice, FaRobot, FaChartBar, FaMobile, FaCloud, FaLock, FaBolt, FaUsers, FaChartLine } from 'react-icons/fa';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -148,7 +149,7 @@ const Features = () => {
             <h2>See it in action</h2>
             <p>Start your 7-day free trial and experience the difference</p>
             <div style={{ marginTop: '2rem' }}>
-              <button className="btn btn-primary btn-lg" style={{ marginRight: '1rem' }}>Start Free Trial</button>
+              <Link to="/signup" className="btn btn-primary btn-lg" style={{ marginRight: '1rem' }}>Start Free Trial</Link>
               <button className="btn btn-secondary btn-lg">Watch Demo Video</button>
             </div>
           </motion.div>

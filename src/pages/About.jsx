@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaRocket, FaHeart, FaUsers, FaBullseye } from 'react-icons/fa';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -126,7 +127,7 @@ const About = () => {
             <h3>Join us in transforming Indian businesses</h3>
             <p>Whether you're a customer, partner, or future team member, there's a place for you at Kitaab.</p>
             <div style={{ marginTop: '2rem' }}>
-              <button className="btn btn-primary btn-lg" style={{ marginRight: '1rem' }}>Start Free Trial</button>
+              <Link to="/signup" className="btn btn-primary btn-lg" style={{ marginRight: '1rem' }}>Start Free Trial</Link>
               <button className="btn btn-secondary btn-lg">View Careers</button>
             </div>
           </div>

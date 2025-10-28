@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaLock, FaShieldAlt, FaServer, FaUserShield, FaCheckCircle, FaKey, FaCloud, FaFingerprint } from 'react-icons/fa';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -194,7 +195,7 @@ const Security = () => {
           <motion.div className="cta-content" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <h2>Security you can trust</h2>
             <p>Start using Kitaab with confidence. Your business data is in safe hands.</p>
-            <button className="btn btn-primary btn-lg">Start Free Trial</button>
+            <Link to="/signup" className="btn btn-primary btn-lg">Start Free Trial</Link>
             <div className="trust-indicators" style={{ marginTop: '2rem' }}>
               <span><FaShieldAlt /> Bank-grade encryption</span>
               <span><FaCheckCircle /> SOC 2 certified</span>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaRocket, FaChartLine, FaClock, FaShieldAlt, FaMicrophone, FaCamera, FaFileInvoice, FaRobot, FaChartBar, FaStar, FaCheckCircle } from 'react-icons/fa';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -54,7 +55,7 @@ const Home = () => {
             <h1>Your business runs <span className="gradient-text">itself</span></h1>
             <p className="hero-subtitle">AI-powered bookkeeping that saves 3 hours daily. From ₹1,499/month.</p>
             <div className="hero-cta">
-              <button className="btn btn-primary btn-lg">Start 7-Day Free Trial</button>
+              <Link to="/signup" className="btn btn-primary btn-lg">Start Free Trial</Link>
               <button className="btn btn-secondary btn-lg">Watch Demo</button>
             </div>
             <div className="hero-stats">
@@ -151,7 +152,7 @@ const Home = () => {
                 <li><FaCheckCircle /> Priority support</li>
                 <li><FaCheckCircle /> API access</li>
               </ul>
-              <button className="btn btn-primary btn-full">Start Free Trial</button>
+              <Link to="/signup" className="btn btn-primary btn-full">Start Free Trial</Link>
             </motion.div>
             <motion.div className="pricing-card" whileHover={{ scale: 1.05 }}>
               <h3>Essential</h3>
@@ -165,7 +166,7 @@ const Home = () => {
                 <li><FaCheckCircle /> Dedicated account manager</li>
                 <li><FaCheckCircle /> Custom integrations</li>
               </ul>
-              <button className="btn btn-secondary btn-full">Start Free Trial</button>
+              <Link to="/signup" className="btn btn-secondary btn-full">Start Free Trial</Link>
             </motion.div>
           </div>
           <div className="pricing-note">
@@ -180,7 +181,7 @@ const Home = () => {
           <motion.div className="cta-content" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <h2>Join 2,847 growing businesses</h2>
             <p>Start your 7-day free trial. No credit card required.</p>
-            <button className="btn btn-primary btn-lg">Start Free Trial</button>
+            <Link to="/signup" className="btn btn-primary btn-lg">Start Free Trial</Link>
             <div className="trust-indicators">
               <span><FaShieldAlt /> Bank-grade security</span>
               <span><FaCheckCircle /> Your data never shared</span>

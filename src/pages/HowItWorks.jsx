@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaDownload, FaUserPlus, FaCamera, FaRocket, FaCheckCircle } from 'react-icons/fa';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -183,7 +184,7 @@ const HowItWorks = () => {
           <motion.div className="cta-content" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
             <h2>Ready to transform your business?</h2>
             <p>Join 2,847 businesses already saving 3 hours daily</p>
-            <button className="btn btn-primary btn-lg">Start Free Trial</button>
+            <Link to="/signup" className="btn btn-primary btn-lg">Start Free Trial</Link>
             <div className="trust-indicators" style={{ marginTop: '2rem' }}>
               <span><FaCheckCircle /> No credit card required</span>
               <span><FaCheckCircle /> 7-day free trial</span>
