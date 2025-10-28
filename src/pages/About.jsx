@@ -5,55 +5,149 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const About = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
-
   const values = [
-    { icon: <FaBullseye />, title: "Mission Driven", desc: "Empowering every Indian business owner with technology that was once only available to large enterprises." },
-    { icon: <FaHeart />, title: "Built with Care", desc: "Every feature is designed with real business owners in mind. We obsess over simplicity and usability." },
-    { icon: <FaUsers />, title: "Customer First", desc: "Your success is our success. We're not satisfied until you're growing faster than ever." },
-    { icon: <FaRocket />, title: "Innovation", desc: "Constantly pushing boundaries with AI, automation, and cutting-edge technology." }
+    {
+      icon: <FaBullseye />,
+      title: "Mission Driven",
+      desc: "Empowering every Indian business owner with technology that was once only available to large enterprises."
+    },
+    {
+      icon: <FaHeart />,
+      title: "Built with Care",
+      desc: "Every feature is designed with real business owners in mind. We obsess over simplicity and usability."
+    },
+    {
+      icon: <FaUsers />,
+      title: "Customer First",
+      desc: "Your success is our success. We're not satisfied until you're growing faster than ever."
+    },
+    {
+      icon: <FaRocket />,
+      title: "Innovation",
+      desc: "Constantly pushing boundaries with AI, automation, and cutting-edge technology."
+    }
   ];
 
   const team = [
-    { role: "Leadership", desc: "Serial entrepreneurs who've built and scaled multiple businesses in India." },
-    { role: "Engineering", desc: "World-class engineers from top tech companies, passionate about solving real problems." },
-    { role: "Support", desc: "Dedicated team of business experts who understand your challenges intimately." }
+    {
+      role: "Leadership",
+      desc: "Serial entrepreneurs who've built and scaled multiple businesses in India."
+    },
+    {
+      role: "Engineering",
+      desc: "World-class engineers from top tech companies, passionate about solving real problems."
+    },
+    {
+      role: "Support",
+      desc: "Dedicated team of business experts who understand your challenges intimately."
+    }
+  ];
+
+  const stats = [
+    { value: "2,847", label: "Active Businesses" },
+    { value: "₹14.7 Cr", label: "Processed Monthly" },
+    { value: "50,000+", label: "Hours Saved" },
+    { value: "98%", label: "Satisfaction Rate" }
   ];
 
   return (
-    <div className="landing-page">
+    <div style={{ backgroundColor: 'white' }}>
       <Navigation />
 
       {/* Hero */}
-      <section className="hero">
-        <div className="container">
-          <motion.div initial="hidden" animate="visible" variants={fadeIn} className="hero-content">
-            <h1>We're on a mission to <span className="gradient-text">transform</span> Indian businesses</h1>
-            <p className="hero-subtitle">Built in India, for India. Kitaab is democratizing business intelligence through AI.</p>
+      <section style={{
+        paddingTop: '120px',
+        paddingBottom: '96px',
+        background: 'linear-gradient(to bottom, #ffffff 0%, #f8faf9 100%)'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            style={{
+              textAlign: 'center',
+              maxWidth: '900px',
+              margin: '0 auto'
+            }}
+          >
+            <h1 style={{
+              fontSize: 'clamp(3rem, 6vw, 4.5rem)',
+              fontWeight: '800',
+              color: '#0f1419',
+              lineHeight: '1.15',
+              marginBottom: '32px',
+              letterSpacing: '-0.02em'
+            }}>
+              Operating System for{' '}
+              <span style={{
+                background: 'linear-gradient(135deg, #2D6247 0%, #52B788 50%, #74C69D 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
+                Indian Commerce
+              </span>
+            </h1>
+            <p style={{
+              fontSize: '1.25rem',
+              color: '#536471',
+              lineHeight: '1.7',
+              marginBottom: '0'
+            }}>
+              Built in India, for India. Kitaab is democratizing business intelligence through AI.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Story */}
-      <section className="features-section">
-        <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="text-center">Our Story</h2>
-            <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--gray-700)', marginBottom: '1.5rem' }}>
-                Kitaab was born from a simple observation: while large corporations had access to expensive ERPs and business intelligence tools,
-                small and medium businesses were still managing their operations with pen, paper, and Excel sheets.
+      {/* Intro */}
+      <section style={{
+        padding: '96px 0',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <div style={{
+            maxWidth: '800px',
+            margin: '0 auto'
+          }}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <p style={{
+                fontSize: '1.0625rem',
+                lineHeight: '1.8',
+                color: '#536471',
+                marginBottom: '24px'
+              }}>
+                Large enterprises have expensive ERPs. International tools built for different markets. Meanwhile, small Indian businesses—the economy's backbone—struggle with pen, paper, and Excel chaos.
               </p>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--gray-700)', marginBottom: '1.5rem' }}>
-                We realized that AI and automation could level the playing field. Every business owner deserves tools that are as smart
-                as they are - tools that understand context, predict needs, and adapt to unique workflows.
+              <p style={{
+                fontSize: '1.0625rem',
+                lineHeight: '1.8',
+                color: '#536471',
+                marginBottom: '24px'
+              }}>
+                We're changing that.
               </p>
-              <p style={{ fontSize: '1.125rem', lineHeight: '1.8', color: 'var(--gray-700)' }}>
-                Today, Kitaab serves thousands of businesses across India, helping them save time, reduce errors, and grow faster.
-                But we're just getting started. Our vision is to become the operating system for every business in India.
+              <p style={{
+                fontSize: '1.0625rem',
+                lineHeight: '1.8',
+                color: '#536471',
+                marginBottom: '0'
+              }}>
+                World-class technology that understands Indian business practices. Speaks your language. Works in Indian conditions. Priced for Indian businesses.
               </p>
             </motion.div>
           </div>
@@ -61,22 +155,81 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="benefits-section">
-        <div className="container">
-          <h2 className="text-center">Our Values</h2>
-          <div className="features-grid">
+      <section style={{
+        padding: '96px 0',
+        backgroundColor: '#f8faf9'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+            fontWeight: '800',
+            textAlign: 'center',
+            color: '#0f1419',
+            marginBottom: '64px',
+            letterSpacing: '-0.02em'
+          }}>
+            Our Values
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '32px'
+          }}>
             {values.map((value, i) => (
               <motion.div
                 key={i}
-                className="feature-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
+                style={{
+                  background: 'white',
+                  padding: '32px',
+                  borderRadius: '16px',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.06)',
+                  border: '1px solid rgba(45, 98, 71, 0.1)',
+                  transition: 'all 0.2s'
+                }}
+                whileHover={{
+                  y: -4,
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)'
+                }}
               >
-                <div className="feature-icon">{value.icon}</div>
-                <h3>{value.title}</h3>
-                <p>{value.desc}</p>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'white',
+                  fontSize: '24px',
+                  marginBottom: '20px'
+                }}>
+                  {value.icon}
+                </div>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: '700',
+                  color: '#0f1419',
+                  marginBottom: '12px',
+                  letterSpacing: '-0.01em'
+                }}>
+                  {value.title}
+                </h3>
+                <p style={{
+                  fontSize: '1rem',
+                  color: '#536471',
+                  lineHeight: '1.6',
+                  margin: '0'
+                }}>
+                  {value.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -84,21 +237,69 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="features-section">
-        <div className="container">
-          <h2 className="text-center">Our Team</h2>
-          <div className="features-grid" style={{ maxWidth: '900px', margin: '3rem auto 0' }}>
+      <section style={{
+        padding: '96px 0',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <h2 style={{
+            fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+            fontWeight: '800',
+            textAlign: 'center',
+            color: '#0f1419',
+            marginBottom: '64px',
+            letterSpacing: '-0.02em'
+          }}>
+            Our Team
+          </h2>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '32px',
+            maxWidth: '900px',
+            margin: '0 auto'
+          }}>
             {team.map((member, i) => (
               <motion.div
                 key={i}
-                className="feature-card"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
+                style={{
+                  background: '#f8faf9',
+                  padding: '32px',
+                  borderRadius: '16px',
+                  border: '1px solid rgba(45, 98, 71, 0.1)',
+                  transition: 'all 0.2s'
+                }}
+                whileHover={{
+                  y: -4,
+                  background: 'white',
+                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)'
+                }}
               >
-                <h3>{member.role}</h3>
-                <p>{member.desc}</p>
+                <h3 style={{
+                  fontSize: '1.5rem',
+                  fontWeight: '700',
+                  color: '#0f1419',
+                  marginBottom: '12px',
+                  letterSpacing: '-0.01em'
+                }}>
+                  {member.role}
+                </h3>
+                <p style={{
+                  fontSize: '1rem',
+                  color: '#536471',
+                  lineHeight: '1.6',
+                  margin: '0'
+                }}>
+                  {member.desc}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -106,29 +307,148 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="cta-section">
-        <div className="container">
-          <motion.div className="cta-content" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-            <h2>Impact by Numbers</h2>
-            <div className="hero-stats" style={{ marginTop: '3rem' }}>
-              <div><strong>2,847</strong> Active Businesses</div>
-              <div><strong>₹14.7 Cr</strong> Processed</div>
-              <div><strong>50,000+</strong> Hours Saved</div>
-              <div><strong>98%</strong> Satisfaction</div>
+      <section style={{
+        padding: '96px 0',
+        background: 'linear-gradient(135deg, #1a3a2e 0%, #0f1419 100%)',
+        color: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 style={{
+              fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+              fontWeight: '800',
+              textAlign: 'center',
+              marginBottom: '64px',
+              letterSpacing: '-0.02em'
+            }}>
+              Impact by Numbers
+            </h2>
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gap: '48px'
+            }}>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  style={{ textAlign: 'center' }}
+                >
+                  <div style={{
+                    fontSize: 'clamp(3rem, 5vw, 4rem)',
+                    fontWeight: '800',
+                    background: 'linear-gradient(135deg, #52B788 0%, #74C69D 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    marginBottom: '16px',
+                    letterSpacing: '-0.02em'
+                  }}>
+                    {stat.value}
+                  </div>
+                  <div style={{
+                    fontSize: '1.125rem',
+                    color: '#8b98a5',
+                    fontWeight: '500',
+                    letterSpacing: '0.5px'
+                  }}>
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="features-section">
-        <div className="container">
-          <div className="solution-text">
-            <h3>Join us in transforming Indian businesses</h3>
-            <p>Whether you're a customer, partner, or future team member, there's a place for you at Kitaab.</p>
-            <div style={{ marginTop: '2rem' }}>
-              <Link to="/signup" className="btn btn-primary btn-lg" style={{ marginRight: '1rem' }}>Start Free Trial</Link>
-              <button className="btn btn-secondary btn-lg">View Careers</button>
+      <section style={{
+        padding: '96px 0',
+        backgroundColor: 'white'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '0 1.5rem'
+        }}>
+          <div style={{
+            textAlign: 'center',
+            maxWidth: '800px',
+            margin: '0 auto'
+          }}>
+            <h3 style={{
+              fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+              fontWeight: '800',
+              color: '#0f1419',
+              marginBottom: '24px',
+              letterSpacing: '-0.02em'
+            }}>
+              Join Us in Transforming Indian Business
+            </h3>
+            <p style={{
+              fontSize: '1.125rem',
+              color: '#536471',
+              lineHeight: '1.7',
+              marginBottom: '48px'
+            }}>
+              Whether you're a customer, partner, or future team member, there's a place for you at Kitaab.
+            </p>
+            <div style={{
+              display: 'flex',
+              gap: '16px',
+              justifyContent: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <motion.a
+                href="https://app.kitaab.live"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                style={{
+                  padding: '16px 32px',
+                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                  color: 'white',
+                  textDecoration: 'none',
+                  borderRadius: '12px',
+                  fontSize: '1.0625rem',
+                  fontWeight: '600',
+                  boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
+                  transition: 'all 0.2s',
+                  display: 'inline-block'
+                }}
+              >
+                Start Free Trial
+              </motion.a>
+              <motion.a
+                href="#careers"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                style={{
+                  padding: '16px 32px',
+                  background: 'white',
+                  color: '#2D6247',
+                  textDecoration: 'none',
+                  borderRadius: '12px',
+                  fontSize: '1.0625rem',
+                  fontWeight: '600',
+                  border: '2px solid #2D6247',
+                  transition: 'all 0.2s',
+                  display: 'inline-block'
+                }}
+              >
+                View Careers
+              </motion.a>
             </div>
           </div>
         </div>

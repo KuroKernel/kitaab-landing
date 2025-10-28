@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
-import { FaRocket, FaChartLine, FaClock, FaShieldAlt, FaWhatsapp, FaMicrophone, FaCamera, FaFileInvoice, FaRobot, FaChartBar, FaStar, FaCheckCircle } from 'react-icons/fa';
+import { FaRocket, FaChartLine, FaClock, FaShieldAlt, FaWhatsapp, FaMicrophone, FaCamera, FaFileInvoice, FaRobot, FaChartBar, FaStar, FaCheckCircle, FaBuilding, FaLock, FaMobileAlt, FaChartPie, FaUserShield, FaBolt } from 'react-icons/fa';
 import './LandingPage.css';
+import IconCard from './components/IconCard';
+import PricingCard from './components/PricingCard';
+import AnalyticsSection from './components/AnalyticsSection';
 
 const LandingPage = () => {
   const fadeIn = {
@@ -38,6 +41,15 @@ const LandingPage = () => {
     { text: "My customers pay faster because of automated WhatsApp reminders. Game changer!", author: "Raj Medical Store, Pune" }
   ];
 
+  const iconCardData = [
+    { icon: <FaBuilding />, title: "Corporate Security", badge: "HOT" },
+    { icon: <FaLock />, title: "Bank-Grade Encryption" },
+    { icon: <FaMobileAlt />, title: "Mobile First Design" },
+    { icon: <FaChartPie />, title: "Real-time Analytics" },
+    { icon: <FaUserShield />, title: "Privacy Protected" },
+    { icon: <FaBolt />, title: "Lightning Fast" }
+  ];
+
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -58,21 +70,196 @@ const LandingPage = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="hero">
+      {/* Hero Section with Visual Card Showcase */}
+      <section className="new-hero-section">
         <div className="container">
-          <motion.div initial="hidden" animate="visible" variants={fadeIn} className="hero-content">
-            <h1>Your business runs <span className="gradient-text">itself</span></h1>
-            <p className="hero-subtitle">AI-powered bookkeeping that saves 3 hours daily. From ₹1,499/month.</p>
-            <div className="hero-cta">
-              <button className="btn btn-primary btn-lg">Start 7-Day Free Trial</button>
-              <button className="btn btn-secondary btn-lg">Watch Demo</button>
-            </div>
-            <div className="hero-stats">
-              <div><strong>2,847</strong> Active Businesses</div>
-              <div><strong>₹14.7 Cr</strong> Collected</div>
-              <div><strong>98%</strong> Satisfaction</div>
-            </div>
+          <motion.div initial="hidden" animate="visible" variants={fadeIn} className="hero-content-center">
+            <h1 className="hero-title">Your business runs <span className="gradient-text">itself</span></h1>
+            <p className="hero-description">AI-powered bookkeeping that saves 3 hours daily. From ₹1,499/month.</p>
+          </motion.div>
+
+          {/* Visual Card Showcase */}
+          <div className="cards-showcase">
+            <motion.div
+              className="showcase-card card-primary"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(82, 183, 136, 0.4)' }}
+            >
+              {/* Card Chip */}
+              <div className="card-chip" style={{
+                width: '48px',
+                height: '38px',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                borderRadius: '6px',
+                boxShadow: '0 2px 8px rgba(255, 215, 0, 0.3)'
+              }}></div>
+
+              <div style={{ flex: 1 }}></div>
+
+              {/* Card Number */}
+              <div className="card-number" style={{
+                fontSize: '18px',
+                letterSpacing: '2px',
+                fontFamily: 'monospace',
+                marginBottom: '16px'
+              }}>
+                •••• •••• •••• 4829
+              </div>
+
+              {/* Card Footer */}
+              <div className="card-footer">
+                <div className="card-holder">
+                  <div className="card-label">Card Holder</div>
+                  <div className="card-value">Business Plus</div>
+                </div>
+                <div className="card-expiry">
+                  <div className="card-label">Expires</div>
+                  <div className="card-value">12/26</div>
+                </div>
+              </div>
+
+              {/* Decorative background */}
+              <div style={{
+                position: 'absolute',
+                top: '-50px',
+                right: '-50px',
+                width: '200px',
+                height: '200px',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)',
+                borderRadius: '50%',
+                pointerEvents: 'none'
+              }}></div>
+            </motion.div>
+
+            <motion.div
+              className="showcase-card card-secondary"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(116, 198, 157, 0.4)' }}
+            >
+              <div className="card-chip" style={{
+                width: '48px',
+                height: '38px',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                borderRadius: '6px',
+                boxShadow: '0 2px 8px rgba(255, 215, 0, 0.3)'
+              }}></div>
+
+              <div style={{ flex: 1 }}></div>
+
+              <div className="card-number" style={{
+                fontSize: '18px',
+                letterSpacing: '2px',
+                fontFamily: 'monospace',
+                marginBottom: '16px'
+              }}>
+                •••• •••• •••• 7341
+              </div>
+
+              <div className="card-footer">
+                <div className="card-holder">
+                  <div className="card-label">Card Holder</div>
+                  <div className="card-value">Essential</div>
+                </div>
+                <div className="card-expiry">
+                  <div className="card-label">Expires</div>
+                  <div className="card-value">09/27</div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'absolute',
+                top: '-50px',
+                right: '-50px',
+                width: '200px',
+                height: '200px',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)',
+                borderRadius: '50%',
+                pointerEvents: 'none'
+              }}></div>
+            </motion.div>
+
+            <motion.div
+              className="showcase-card card-tertiary"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              whileHover={{ y: -8, boxShadow: '0 20px 50px rgba(168, 230, 207, 0.4)' }}
+            >
+              <div className="card-chip" style={{
+                width: '48px',
+                height: '38px',
+                background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
+                borderRadius: '6px',
+                boxShadow: '0 2px 8px rgba(255, 215, 0, 0.3)'
+              }}></div>
+
+              <div style={{ flex: 1 }}></div>
+
+              <div className="card-number" style={{
+                fontSize: '18px',
+                letterSpacing: '2px',
+                fontFamily: 'monospace',
+                marginBottom: '16px'
+              }}>
+                •••• •••• •••• 9156
+              </div>
+
+              <div className="card-footer">
+                <div className="card-holder">
+                  <div className="card-label">Card Holder</div>
+                  <div className="card-value">Starter</div>
+                </div>
+                <div className="card-expiry">
+                  <div className="card-label">Expires</div>
+                  <div className="card-value">03/28</div>
+                </div>
+              </div>
+
+              <div style={{
+                position: 'absolute',
+                top: '-50px',
+                right: '-50px',
+                width: '200px',
+                height: '200px',
+                background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)',
+                borderRadius: '50%',
+                pointerEvents: 'none'
+              }}></div>
+            </motion.div>
+          </div>
+
+          {/* Hero CTA */}
+          <div className="hero-cta-buttons">
+            <motion.button
+              className="btn btn-primary btn-lg"
+              whileHover={{ scale: 1.05, boxShadow: '0 12px 32px rgba(82, 183, 136, 0.5)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Start 7-Day Free Trial
+            </motion.button>
+            <motion.button
+              className="btn btn-outline btn-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Watch Demo
+            </motion.button>
+          </div>
+
+          {/* Hero Stats */}
+          <motion.div
+            className="hero-stats"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <div><strong>2,847</strong> Active Businesses</div>
+            <div><strong>₹14.7 Cr</strong> Collected</div>
+            <div><strong>98%</strong> Satisfaction</div>
           </motion.div>
         </div>
       </section>
@@ -145,57 +332,91 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section id="pricing" className="pricing-section">
+      {/* Analytics Section */}
+      <AnalyticsSection />
+
+      {/* Pricing Section with Icon Cards */}
+      <section id="pricing" className="new-pricing-section">
         <div className="container">
-          <h2 className="text-center">Choose your <span className="gradient-text">growth path</span></h2>
-          <div className="pricing-grid">
-            <motion.div className="pricing-card popular" whileHover={{ scale: 1.05 }}>
-              <div className="popular-badge">Most Popular</div>
-              <h3>Business</h3>
-              <div className="price">₹1,499<span>/month</span></div>
-              <ul className="features-list">
-                <li><FaCheckCircle /> Full web + mobile access</li>
-                <li><FaCheckCircle /> Unlimited AI scans</li>
-                <li><FaCheckCircle /> 3 team members</li>
-                <li><FaCheckCircle /> All features included</li>
-                <li><FaCheckCircle /> Priority support</li>
-                <li><FaCheckCircle /> API access</li>
-              </ul>
-              <button className="btn btn-primary btn-full">Start Free Trial</button>
-            </motion.div>
-            <motion.div className="pricing-card" whileHover={{ scale: 1.05 }}>
-              <h3>Essential</h3>
-              <div className="price">₹2,499<span>/month</span></div>
-              <div className="subtitle">Performance Edition</div>
-              <ul className="features-list">
-                <li><FaCheckCircle /> Everything in Business +</li>
-                <li><FaCheckCircle /> Real-time analytics (1-sec)</li>
-                <li><FaCheckCircle /> Predictive AI insights</li>
-                <li><FaCheckCircle /> Advanced fraud detection</li>
-                <li><FaCheckCircle /> Dedicated account manager</li>
-                <li><FaCheckCircle /> Custom integrations</li>
-              </ul>
-              <button className="btn btn-secondary btn-full">Start Free Trial</button>
-            </motion.div>
+          <h2 className="section-title">Choose your <span className="gradient-text">growth path</span></h2>
+          <p className="section-description">Trusted by thousands of businesses with enterprise-grade security and features</p>
+
+          {/* Icon Cards Grid */}
+          <div className="icon-cards-grid">
+            {iconCardData.map((card, index) => (
+              <IconCard key={index} icon={card.icon} title={card.title} badge={card.badge} />
+            ))}
           </div>
-          <div className="pricing-note">
-            <p>✓ 7-day free trial &nbsp;&nbsp; ✓ No credit card required &nbsp;&nbsp; ✓ Cancel anytime</p>
+
+          {/* Detailed Pricing Card */}
+          <div className="detailed-pricing-wrapper">
+            <PricingCard
+              title="Business Plus"
+              price={1499}
+              icon={<FaBuilding />}
+              features={[
+                "Full web + mobile access",
+                "Unlimited AI scans",
+                "3 team members included",
+                "All features included",
+                "Priority support 24/7",
+                "API access & integrations"
+              ]}
+            />
           </div>
+
+          <motion.div
+            className="pricing-note"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <p>7-day free trial • No credit card required • Cancel anytime</p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="cta-section">
+      {/* Premium Dark CTA Section */}
+      <section className="dark-cta-section">
         <div className="container">
-          <motion.div className="cta-content" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
-            <h2>Join 2,847 growing businesses</h2>
-            <p>Start your 7-day free trial. No credit card required.</p>
-            <button className="btn btn-primary btn-lg">Start Free Trial</button>
-            <div className="trust-indicators">
-              <span><FaShieldAlt /> Bank-grade security</span>
-              <span><FaCheckCircle /> Your data never shared</span>
-              <span><FaRocket /> Cancel anytime</span>
+          <motion.div
+            className="dark-cta-content"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="dark-cta-title">Join 2,847 growing businesses</h2>
+            <p className="dark-cta-description">
+              Start your 7-day free trial. No credit card required. Experience the future of bookkeeping.
+            </p>
+            <motion.button
+              className="btn-cta-primary"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: '0 16px 40px rgba(82, 183, 136, 0.5)'
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Start Free Trial Now
+            </motion.button>
+            <div className="trust-indicators" style={{
+              display: 'flex',
+              gap: '2rem',
+              justifyContent: 'center',
+              marginTop: '2rem',
+              flexWrap: 'wrap',
+              color: 'rgba(255, 255, 255, 0.9)'
+            }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <FaShieldAlt /> Bank-grade security
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <FaCheckCircle /> Your data never shared
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <FaRocket /> Cancel anytime
+              </span>
             </div>
           </motion.div>
         </div>

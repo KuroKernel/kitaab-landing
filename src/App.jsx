@@ -5,7 +5,7 @@ import About from './pages/About';
 import Features from './pages/Features';
 import HowItWorks from './pages/HowItWorks';
 import Contact from './pages/Contact';
-import Security from './pages/Security';
+import WhyKitaab from './pages/WhyKitaab';
 import Signup from './pages/Signup';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/features" element={<Features />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/security" element={<Security />} />
+          <Route path="/why-kitaab" element={<WhyKitaab />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
       </Router>
