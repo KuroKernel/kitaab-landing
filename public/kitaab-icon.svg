@@ -1,0 +1,37 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1e40af" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <g transform="translate(24, 24)" filter="url(#shadow)">
+    <!-- Layered book pages -->
+    <rect x="2" y="2" width="16" height="12" rx="2" fill="url(#bookGradient)" opacity="0.3"/>
+    <rect x="0" y="0" width="16" height="12" rx="2" fill="url(#bookGradient)" opacity="0.6"/>
+    <rect x="-2" y="-2" width="16" height="12" rx="2" fill="url(#bookGradient)"/>
+    
+    <!-- Data lines -->
+    <line x1="1" y1="1" x2="9" y2="1" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.9"/>
+    <line x1="1" y1="3" x2="12" y2="3" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.8"/>
+    <line x1="1" y1="5" x2="8" y2="5" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.7"/>
+    <line x1="1" y1="7" x2="10" y2="7" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Currency symbol -->
+    <circle cx="12" cy="8" r="3" fill="url(#accentGradient)" opacity="0.9"/>
+    <text x="12" y="10" text-anchor="middle" font-family="system-ui" font-size="4" font-weight="700" fill="#ffffff">₹</text>
+    
+    <!-- Binding -->
+    <rect x="-2" y="-2" width="1.5" height="12" rx="0.75" fill="#1e3a8a" opacity="0.8"/>
+  </g>
+</svg>

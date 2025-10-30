@@ -392,7 +392,9 @@ const Home = () => {
               { value: "Save 3 Hours", label: "Every Single Day" },
               { value: "Collect 40% Faster", label: "Via WhatsApp" },
               { value: "Zero Penalties", label: "Perfect GST Compliance" },
-              { value: "Real-Time Clarity", label: "On Every Rupee" }
+              { value: "Real-Time Clarity", label: "On Every Rupee" },
+              { value: "Works Offline", label: "Built for India" },
+              { value: "Speaks Hindi", label: "Native Language Support" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -459,22 +461,12 @@ const Home = () => {
             <h2 style={{
               fontSize: 'clamp(2.25rem, 5vw, 3rem)',
               fontWeight: '800',
-              marginBottom: '16px',
+              marginBottom: '48px',
               lineHeight: '1.2',
               letterSpacing: '-0.01em'
             }}>
               Transform Your Business Management Today
             </h2>
-
-            <p style={{
-              fontSize: '1.125rem',
-              opacity: 0.92,
-              marginBottom: '48px',
-              lineHeight: '1.7',
-              fontWeight: '400'
-            }}>
-              14-day trial. No credit card required.
-            </p>
 
             {/* Email Signup Form */}
             <div style={{
@@ -487,14 +479,14 @@ const Home = () => {
             }}>
               <input
                 type="email"
-                placeholder="Your business email"
+                placeholder="your email"
                 style={{
                   flex: '1',
                   minWidth: '280px',
                   padding: '18px 24px',
                   borderRadius: '12px',
-                  border: '2px solid rgba(255, 255, 255, 0.15)',
-                  background: 'rgba(255, 255, 255, 0.08)',
+                  border: '2px solid rgba(255, 255, 255, 0.25)',
+                  background: 'rgba(255, 255, 255, 0.15)',
                   backdropFilter: 'blur(10px)',
                   color: 'white',
                   fontSize: '16px',
@@ -503,12 +495,12 @@ const Home = () => {
                   fontWeight: '500'
                 }}
                 onFocus={(e) => {
-                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.4)';
-                  e.target.style.background = 'rgba(255, 255, 255, 0.12)';
+                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.5)';
+                  e.target.style.background = 'rgba(255, 255, 255, 0.22)';
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.15)';
-                  e.target.style.background = 'rgba(255, 255, 255, 0.08)';
+                  e.target.style.borderColor = 'rgba(255, 255, 255, 0.25)';
+                  e.target.style.background = 'rgba(255, 255, 255, 0.15)';
                 }}
               />
               <Link to="/signup" style={{ textDecoration: 'none' }}>

@@ -1,0 +1,80 @@
+<svg viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Premium gradients -->
+    <linearGradient id="bookGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    
+    <!-- Subtle shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1e40af" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Animation for data visualization -->
+    <style>
+      .data-line {
+        animation: dataFlow 3s ease-in-out infinite;
+      }
+      .data-line:nth-child(2) { animation-delay: 0.5s; }
+      .data-line:nth-child(3) { animation-delay: 1s; }
+      
+      @keyframes dataFlow {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Refined logo mark -->
+  <g transform="translate(40, 40)" filter="url(#shadow)">
+    <!-- Layered book pages with refined proportions -->
+    <rect x="2" y="2" width="24" height="18" rx="2" fill="url(#bookGradient)" opacity="0.25"/>
+    <rect x="0" y="0" width="24" height="18" rx="2" fill="url(#bookGradient)" opacity="0.5"/>
+    <rect x="-2" y="-2" width="24" height="18" rx="2" fill="url(#bookGradient)"/>
+    
+    <!-- Intelligent data visualization -->
+    <g class="data-lines">
+      <line class="data-line" x1="2" y1="2" x2="14" y2="2" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+      <line class="data-line" x1="2" y1="5" x2="18" y2="5" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+      <line class="data-line" x1="2" y1="8" x2="12" y2="8" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <line class="data-line" x1="2" y1="11" x2="16" y2="11" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+    </g>
+    
+    <!-- Premium currency integration -->
+    <circle cx="18" cy="12" r="4" fill="url(#accentGradient)" opacity="0.9"/>
+    <text x="18" y="14.5" text-anchor="middle" font-family="system-ui" font-size="6" font-weight="700" fill="#ffffff">₹</text>
+    
+    <!-- Subtle binding detail -->
+    <rect x="-2" y="-2" width="2" height="18" rx="1" fill="#1e3a8a" opacity="0.8"/>
+  </g>
+  
+  <!-- Refined typography system -->
+  <g transform="translate(90, 28)">
+    <!-- Primary wordmark -->
+    <text x="0" y="24" font-family="Inter, system-ui, -apple-system, sans-serif" 
+          font-size="36" font-weight="700" fill="#1e40af" letter-spacing="-1.2px">
+      Kitaab
+    </text>
+    
+    <!-- Elegant tagline -->
+    <text x="0" y="40" font-family="Inter, system-ui, -apple-system, sans-serif" 
+          font-size="11" font-weight="500" fill="#64748b" letter-spacing="0.8px" opacity="0.8">
+      INTELLIGENT BUSINESS LEDGER
+    </text>
+    
+    <!-- Devanagari accent -->
+    <text x="140" y="24" font-family="system-ui" 
+          font-size="20" font-weight="400" fill="url(#accentGradient)" opacity="0.7">
+      किताब
+    </text>
+  </g>
+  
+  <!-- Subtle brand accent line -->
+  <line x1="90" y1="52" x2="280" y2="52" stroke="url(#accentGradient)" stroke-width="1" opacity="0.3"/>
+</svg>
