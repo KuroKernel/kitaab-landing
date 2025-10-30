@@ -123,6 +123,10 @@ const Features = () => {
     {
       title: "Professional Services",
       desc: "Client billing, retainer management, time-based invoicing, expense reimbursement tracking."
+    },
+    {
+      title: "Education & Training",
+      desc: "Student fee management, course billing, installment tracking, certificate generation, attendance records."
     }
   ];
 
