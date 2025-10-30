@@ -63,7 +63,7 @@ const Home = () => {
               margin: '0 auto 24px',
               fontWeight: '400'
             }}>
-              AI-powered business management for Indian SMBs. Invoice scanning to GST filing. Save 3 hours daily.
+              Built around insight, liquidity, and control, not bookkeeping.
             </p>
 
             {/* Trust Line */}
@@ -73,7 +73,7 @@ const Home = () => {
               marginBottom: '48px',
               fontWeight: '500'
             }}>
-              500+ businesses • ₹14.7 Cr processed monthly
+              Built for Indian SMBs • Launch Special: 50% Off
             </p>
 
             {/* CTA Buttons */}
@@ -85,45 +85,49 @@ const Home = () => {
               flexWrap: 'wrap',
               marginBottom: '24px'
             }}>
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '18px 48px',
-                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '12px',
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  cursor: 'pointer',
-                  boxShadow: '0 8px 24px rgba(82, 183, 136, 0.35), 0 2px 8px rgba(45, 98, 71, 0.2)',
-                  transition: 'all 0.2s ease',
-                  letterSpacing: '0.3px'
-                }}
-              >
-                Start Free Trial
-              </motion.button>
+              <Link to="/signup" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '18px 48px',
+                    background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    boxShadow: '0 8px 24px rgba(82, 183, 136, 0.35), 0 2px 8px rgba(45, 98, 71, 0.2)',
+                    transition: 'all 0.2s ease',
+                    letterSpacing: '0.3px'
+                  }}
+                >
+                  Start Free Trial
+                </motion.button>
+              </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '18px 48px',
-                  background: 'white',
-                  color: '#2D6247',
-                  border: '2px solid #2D6247',
-                  borderRadius: '12px',
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  cursor: 'pointer',
-                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-                  transition: 'all 0.2s ease',
-                  letterSpacing: '0.3px'
-                }}
-              >
-                Watch Demo
-              </motion.button>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '18px 48px',
+                    background: 'white',
+                    color: '#2D6247',
+                    border: '2px solid #2D6247',
+                    borderRadius: '12px',
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
+                    transition: 'all 0.2s ease',
+                    letterSpacing: '0.3px'
+                  }}
+                >
+                  Watch Demo
+                </motion.button>
+              </Link>
             </div>
 
             {/* Below CTA Text */}
@@ -383,10 +387,10 @@ const Home = () => {
             gap: '48px'
           }}>
             {[
-              { value: "2,847", label: "Active Businesses" },
-              { value: "₹14.7 Cr", label: "Processed Monthly" },
-              { value: "50,000+", label: "Hours Saved" },
-              { value: "98%", label: "Satisfaction Rate" }
+              { value: "AI-Powered", label: "Invoice Scanning" },
+              { value: "3+ Hours", label: "Saved Daily" },
+              { value: "GST Ready", label: "Compliance Built-in" },
+              { value: "Free Trial", label: "No Credit Card" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -455,7 +459,7 @@ const Home = () => {
               lineHeight: '1.2',
               letterSpacing: '-0.01em'
             }}>
-              Join 500+ Businesses Using Kitaab
+              Transform Your Business Management Today
             </h2>
 
             <p style={{
@@ -503,26 +507,28 @@ const Home = () => {
                   e.target.style.background = 'rgba(255, 255, 255, 0.08)';
                 }}
               />
-              <motion.button
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '18px 36px',
-                  background: 'linear-gradient(135deg, #52B788 0%, #74C69D 100%)',
-                  color: '#0f1419',
-                  border: 'none',
-                  borderRadius: '12px',
-                  fontSize: '16px',
-                  fontWeight: '700',
-                  cursor: 'pointer',
-                  whiteSpace: 'nowrap',
-                  boxShadow: '0 8px 20px rgba(82, 183, 136, 0.3)',
-                  transition: 'all 0.2s ease',
-                  letterSpacing: '0.3px'
-                }}
-              >
-                Start Free Trial
-              </motion.button>
+              <Link to="/signup" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '18px 36px',
+                    background: 'linear-gradient(135deg, #52B788 0%, #74C69D 100%)',
+                    color: '#0f1419',
+                    border: 'none',
+                    borderRadius: '12px',
+                    fontSize: '16px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap',
+                    boxShadow: '0 8px 20px rgba(82, 183, 136, 0.3)',
+                    transition: 'all 0.2s ease',
+                    letterSpacing: '0.3px'
+                  }}
+                >
+                  Start Free Trial
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>

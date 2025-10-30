@@ -245,11 +245,11 @@ const Footer = () => {
                   onMouseEnter={(e) => e.target.style.color = '#52B788'}
                   onMouseLeave={(e) => e.target.style.color = '#8b98a5'}
                 >hello@kitaab.live</a>
-                <a href="tel:+919999999999" style={{ color: '#8b98a5', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
+                <a href="tel:+918982870739" style={{ color: '#8b98a5', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
                   onMouseEnter={(e) => e.target.style.color = '#52B788'}
                   onMouseLeave={(e) => e.target.style.color = '#8b98a5'}
-                >+91 99999 99999</a>
-                <a href="https://wa.me/919999999999" style={{ color: '#8b98a5', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
+                >+91 89828 70739</a>
+                <a href="https://wa.me/918982870739" style={{ color: '#8b98a5', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
                   onMouseEnter={(e) => e.target.style.color = '#52B788'}
                   onMouseLeave={(e) => e.target.style.color = '#8b98a5'}
                 >WhatsApp Support</a>
@@ -308,7 +308,7 @@ const Footer = () => {
       </footer>
 
       {/* WhatsApp Float Button */}
-      <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" style={{
+      <a href="https://wa.me/918982870739" target="_blank" rel="noopener noreferrer" style={{
         position: 'fixed',
         bottom: '2rem',
         right: '2rem',

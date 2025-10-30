@@ -44,10 +44,10 @@ const About = () => {
   ];
 
   const stats = [
-    { value: "2,847", label: "Active Businesses" },
-    { value: "₹14.7 Cr", label: "Processed Monthly" },
-    { value: "50,000+", label: "Hours Saved" },
-    { value: "98%", label: "Satisfaction Rate" }
+    { value: "AI-First", label: "Modern Technology" },
+    { value: "India-Built", label: "For Indian Business" },
+    { value: "Free Trial", label: "No Credit Card" },
+    { value: "24/7", label: "Support Available" }
   ];
 
   return (
@@ -411,44 +411,45 @@ const About = () => {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <motion.a
-                href="https://app.kitaab.live"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                Start Free Trial
-              </motion.a>
-              <motion.a
-                href="#careers"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'white',
-                  color: '#2D6247',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  border: '2px solid #2D6247',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                View Careers
-              </motion.a>
+              <Link to="/signup" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Start Free Trial
+                </motion.button>
+              </Link>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'white',
+                    color: '#2D6247',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    border: '2px solid #2D6247',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Contact Us
+                </motion.button>
+              </Link>
             </div>
           </div>
         </div>

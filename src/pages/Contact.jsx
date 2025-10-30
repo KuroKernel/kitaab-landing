@@ -53,20 +53,20 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: "Email Us",
-      value: "support@kitaab.live",
-      link: "mailto:support@kitaab.live"
+      value: "hello@kitaab.live",
+      link: "mailto:hello@kitaab.live"
     },
     {
       icon: <FaPhone />,
       title: "Call Us",
-      value: "+91 99999 99999",
-      link: "tel:+919999999999"
+      value: "+91 89828 70739",
+      link: "tel:+918982870739"
     },
     {
       icon: <FaWhatsapp />,
       title: "WhatsApp",
       value: "Chat with us",
-      link: "https://wa.me/919999999999"
+      link: "https://wa.me/918982870739"
     },
     {
       icon: <FaMapMarkerAlt />,
@@ -857,7 +857,7 @@ const Contact = () => {
                 Visit Help Center
               </motion.a>
               <motion.a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/918982870739"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
