@@ -383,14 +383,16 @@ const Home = () => {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '48px'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '64px',
+            maxWidth: '1100px',
+            margin: '0 auto'
           }}>
             {[
-              { value: "AI-Powered", label: "Invoice Scanning" },
-              { value: "3+ Hours", label: "Saved Daily" },
-              { value: "GST Ready", label: "Compliance Built-in" },
-              { value: "Free Trial", label: "No Credit Card" }
+              { value: "Save 3 Hours", label: "Every Single Day" },
+              { value: "Collect 40% Faster", label: "Via WhatsApp" },
+              { value: "Zero Penalties", label: "Perfect GST Compliance" },
+              { value: "Real-Time Clarity", label: "On Every Rupee" }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -401,21 +403,23 @@ const Home = () => {
                 style={{ textAlign: 'center' }}
               >
                 <div style={{
-                  fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
+                  fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
                   fontWeight: '800',
                   background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  marginBottom: '12px',
-                  lineHeight: '1.1'
+                  marginBottom: '8px',
+                  lineHeight: '1.2',
+                  letterSpacing: '-0.01em'
                 }}>
                   {stat.value}
                 </div>
                 <div style={{
-                  fontSize: '1.125rem',
+                  fontSize: '1rem',
                   color: '#536471',
-                  fontWeight: '500'
+                  fontWeight: '500',
+                  lineHeight: '1.5'
                 }}>
                   {stat.label}
                 </div>
