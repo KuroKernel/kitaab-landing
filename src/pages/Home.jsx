@@ -238,12 +238,12 @@ const Home = () => {
                     letterSpacing: '1px',
                     marginBottom: '4px',
                     fontWeight: '600'
-                  }}>Card Holder</div>
+                  }}>You're in</div>
                   <div style={{
                     fontSize: '15px',
                     fontWeight: '700',
                     letterSpacing: '0.3px'
-                  }}>Your Name</div>
+                  }}>Control</div>
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{
@@ -253,12 +253,12 @@ const Home = () => {
                     letterSpacing: '1px',
                     marginBottom: '4px',
                     fontWeight: '600'
-                  }}>Expires</div>
+                  }}>Peace of</div>
                   <div style={{
                     fontSize: '15px',
                     fontWeight: '700',
                     letterSpacing: '0.3px'
-                  }}>12/26</div>
+                  }}>Mind</div>
                 </div>
               </div>
 
@@ -294,7 +294,7 @@ const Home = () => {
               marginBottom: '24px',
               letterSpacing: '-0.01em'
             }}>
-              Built for Kirana Stores, Auto Dealers, Small Manufacturers
+              The Most Beautiful Way to Run a Business
             </h2>
           </div>
 
