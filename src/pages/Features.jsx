@@ -9,7 +9,7 @@ const Features = () => {
     {
       icon: <FaCamera />,
       title: "AI Invoice Scanner",
-      desc: "Photograph any invoice or bill. AI extracts vendor name, items, quantities, prices, GST details instantly. Updates your books automatically. Accuracy: 99.7%. No manual data entry ever again.",
+      desc: "Photograph any invoice or bill. AI extracts vendor name, items, quantities, prices, GST details instantly. Updates your books automatically. No manual data entry ever again.",
       tag: "Photo → Inventory in 10 seconds"
     },
     {
@@ -58,7 +58,7 @@ const Features = () => {
     {
       icon: <FaLock />,
       title: "Bank-Grade Security",
-      desc: "256-bit encryption, SOC 2 compliance, regular security audits. Your data is safer than in a bank."
+      desc: "256-bit AES encryption, ISO 27001 standards, regular penetration testing. Your data is protected with enterprise-grade security."
     },
     {
       icon: <FaBolt />,
@@ -74,6 +74,16 @@ const Features = () => {
       icon: <FaChartLine />,
       title: "Predictive Insights",
       desc: "AI forecasts cash flow, identifies spending patterns, alerts you to anomalies."
+    },
+    {
+      icon: <FaRobot />,
+      title: "Smart Automation",
+      desc: "Auto-categorize transactions, send payment reminders, generate recurring invoices. Set it once, forget it."
+    },
+    {
+      icon: <FaFileInvoice />,
+      title: "Automated Backups",
+      desc: "Daily encrypted backups to multiple secure locations. Your data is always safe and recoverable."
     }
   ];
 
@@ -89,6 +99,30 @@ const Features = () => {
     {
       title: "Manufacturing & Distribution",
       desc: "Complex inventory management, production tracking, multi-location support, advanced reporting."
+    },
+    {
+      title: "Food & Restaurant",
+      desc: "Table management, recipe costing, supplier tracking, daily sales reports, ingredient inventory."
+    },
+    {
+      title: "Healthcare & Pharmacy",
+      desc: "Medicine stock management, prescription tracking, batch expiry alerts, GST-compliant billing."
+    },
+    {
+      title: "E-commerce & Online",
+      desc: "Multi-channel order sync, payment gateway integration, shipping tracking, marketplace reconciliation."
+    },
+    {
+      title: "Logistics & Transport",
+      desc: "Vehicle management, fuel tracking, trip billing, driver payments, route optimization data."
+    },
+    {
+      title: "Construction & Contractors",
+      desc: "Project-wise accounting, material tracking, labor management, site expense monitoring."
+    },
+    {
+      title: "Professional Services",
+      desc: "Client billing, retainer management, time-based invoicing, expense reimbursement tracking."
     }
   ];
 
@@ -435,44 +469,45 @@ const Features = () => {
               justifyContent: 'center',
               flexWrap: 'wrap'
             }}>
-              <motion.a
-                href="https://app.kitaab.live"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                Start Free Trial
-              </motion.a>
-              <motion.a
-                href="#demo"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  border: '2px solid rgba(255, 255, 255, 0.2)',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                Watch Demo Video
-              </motion.a>
+              <Link to="/signup" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Start Free Trial
+                </motion.button>
+              </Link>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    border: '2px solid rgba(255, 255, 255, 0.2)',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Watch Demo Video
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         </div>
