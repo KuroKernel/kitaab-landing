@@ -110,12 +110,24 @@ const HowItWorks = () => {
               </span>
             </h1>
             <p style={{
-              fontSize: '1.25rem',
+              fontSize: '1.5rem',
+              color: '#0f1419',
+              lineHeight: '1.4',
+              marginBottom: '16px',
+              fontWeight: '600',
+              letterSpacing: '-0.01em'
+            }}>
+              It Just Works — Beautifully.
+            </p>
+            <p style={{
+              fontSize: '1.125rem',
               color: '#536471',
               lineHeight: '1.7',
-              marginBottom: '0'
+              marginBottom: '0',
+              maxWidth: '800px',
+              margin: '0 auto'
             }}>
-              From sign-up to automated bookkeeping in minutes, not months.
+              Connect, sync, and watch your entire business run itself — invoices, insights, and control in perfect flow.
             </p>
           </motion.div>
         </div>
@@ -412,7 +424,7 @@ const HowItWorks = () => {
               lineHeight: '1.7',
               marginBottom: '48px'
             }}>
-              Join 500+ businesses saving 3 hours daily
+              Start your free trial and experience the difference
             </p>
             <div style={{
               display: 'flex',
@@ -421,44 +433,45 @@ const HowItWorks = () => {
               flexWrap: 'wrap',
               marginBottom: '32px'
             }}>
-              <motion.a
-                href="https://app.kitaab.live"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                Start Free Trial
-              </motion.a>
-              <motion.a
-                href="#sales"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  padding: '16px 32px',
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  color: 'white',
-                  textDecoration: 'none',
-                  borderRadius: '12px',
-                  fontSize: '1.0625rem',
-                  fontWeight: '600',
-                  border: '2px solid rgba(255, 255, 255, 0.2)',
-                  transition: 'all 0.2s',
-                  display: 'inline-block'
-                }}
-              >
-                Talk to Sales
-              </motion.a>
+              <Link to="/signup" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'linear-gradient(135deg, #2D6247 0%, #52B788 100%)',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    boxShadow: '0 4px 16px rgba(82, 183, 136, 0.3)',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Start Free Trial
+                </motion.button>
+              </Link>
+              <Link to="/contact" style={{ textDecoration: 'none' }}>
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  style={{
+                    padding: '16px 32px',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'white',
+                    borderRadius: '12px',
+                    fontSize: '1.0625rem',
+                    fontWeight: '600',
+                    border: '2px solid rgba(255, 255, 255, 0.2)',
+                    transition: 'all 0.2s',
+                    cursor: 'pointer'
+                  }}
+                >
+                  Talk to Sales
+                </motion.button>
+              </Link>
             </div>
             <div style={{
               display: 'flex',
